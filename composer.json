@@ -1,0 +1,35 @@
+{
+    "name": "aasumitro/db-msb",
+    "description": "Database Migration Schema Builder Skeleton.",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "ext-pdo": "*",
+        "doctrine/dbal": "^3.0",
+        "flipbox/lumen-generator": "^8.0",
+        "laravel/lumen-framework": "^8.0"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    }
+}
